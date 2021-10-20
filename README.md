@@ -1,7 +1,7 @@
 # Python For Visual Designers
 
 * [Type@Cooper Public Workshop](http://coopertype.org/event/python_for_visual_designers_fall2021)
-* _Term:_ Summer 2021
+* _Term:_ Fall 2021
 * _Dates:_ Thursdays 6:30–8:30pm ET, October 21 – November 18, December 16
 * _Instructor:_ [David Jonathan Ross](https://djr.com)
 * _Office Hours:_ [Book on Calendly](http://calendly.com/djrrb/office-hours) or get in touch
@@ -42,8 +42,12 @@ This Type@Cooper course was originated by [Andy Clymer](http://www.andyclymer.co
 | 1   | October 21 | [**Shapes and Loops**](#Session-1-Shapes-and-Loops) | 
 | 2   | October 28 | [**Colors and Text**](#Session-2-Colors-and-Text) | 
 | 3   | November 4 | [**Canvas and Images**](#Session-3-Paths-and-Images) | 
+| | _Clocks back!_ |
 | 4   | November 11 | [**Layouts**](#Session-4-Layouts) |
 | 5   | November 18 | [**Animation**](#Session-5-Animation)|
+|  | 
+| 6   | December 16 | Follow-up session |
+
 
 ## Sessions
 
