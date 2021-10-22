@@ -39,3 +39,5 @@ for row in range(rows):
     b = b + 0.1
     # set red back to 0
     r = 0
+    
+saveImage('gridient.png')

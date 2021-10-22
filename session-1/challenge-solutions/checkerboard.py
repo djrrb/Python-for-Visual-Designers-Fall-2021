@@ -15,7 +15,7 @@ cols = 10
 gridSize = width()/rows
 
 # draw the first set in red
-# so you can see the repeating pattern
+# so you can see the pattern that is getting repeated
 fill(1, 0, 0)
 
 for row in range(rows):
@@ -27,4 +27,4 @@ for row in range(rows):
     y = y + gridSize*2
     x = 0
 
-print('done')
+saveImage('checkerboard.png')
