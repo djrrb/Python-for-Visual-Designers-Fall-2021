@@ -1,7 +1,5 @@
 # make a gradient grid by manipulating red, green, blue values
 
-# instead of drawing one rectangle for each cell in the grid, draw two
-
 newPage(1000, 1000)
 
 # make some variables for x and y
