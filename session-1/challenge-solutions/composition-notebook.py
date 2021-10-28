@@ -8,7 +8,6 @@ radius = 10
 # make a LOT of circles
 for myNumber in range(3000):
     # random()*width() is a random point between 0 and the full width of the canvas (width()).
-    
     x = random()*width()-radius
     y = random()*height()-radius
     oval(x, y, radius*2, radius*2)
@@ -25,3 +24,5 @@ font('Courier New Bold')
 fontSize(20)
 # draw the text with a 100pt border
 text('Composition Notebook', (148, 390))
+
+saveImage('composition-notebook.png')
