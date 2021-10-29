@@ -1,6 +1,6 @@
 frames = 10
 
-for frame in range(frames):
+for frame in range(frames, 0, -1):
     newPage()
     frameDuration(.3)
 
@@ -16,4 +16,4 @@ for frame in range(frames):
         y = random()*height()
         text(str(frame), (x, y))
         
-saveImage('randomNumbers.gif')
+saveImage('countdown.gif')
