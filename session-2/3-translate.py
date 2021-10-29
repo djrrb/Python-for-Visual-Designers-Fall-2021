@@ -12,16 +12,12 @@ mySize = width()
 stroke(1, 0, 0)
 strokeWidth(10)
 # make transparent
-
-# True, False are also things
+fill(None)
 
 for myNumber in range(20):
-    fill(None)
+
     #print(myNumber)
     # draw a rectangle
     # subtracting half width and height of object for x and y
     rect(-mySize/2, -mySize/2, mySize, mySize)
     translate(50, 50)
-
-
-
