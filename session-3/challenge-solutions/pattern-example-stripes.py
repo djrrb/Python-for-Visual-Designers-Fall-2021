@@ -44,10 +44,10 @@ x = 0
 for col in range(columns):
 
     # alternate each column between overlay and multiply blend modes. this will create new colors where our shapes overlap!
-    if col % 2 == 0:
-        blendMode('multiply')    
+    if col % 2:
+        blendMode('overlay')    
     else:
-        blendMode('overlay')
+        blendMode('multiply')
 
     # use a while loop to keep drawing stripes until we reach the top of our document...when the y variable becomes greater than the document height, stop the loop
     while y < height():
@@ -88,3 +88,5 @@ for col in range(columns):
     x += w
     y = -h
     
+
+saveImage('pattern-example-stripes.png')

@@ -105,3 +105,5 @@ for row in range(rows):
             translate(myCardWidth, 0)
     # move us over one height
     translate(0, myCardHeight)
+
+saveImage('businessCard-sheet.pdf')

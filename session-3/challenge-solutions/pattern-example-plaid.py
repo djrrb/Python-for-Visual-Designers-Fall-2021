@@ -90,4 +90,4 @@ for y in range(0, height()+h, h):
         rect(x+b*117, y, b, h)
         rect(x+b*120, y, b, h) 
 
-#saveImage('~/desktop/ross-hunting-tartan-ancient.gif')
+saveImage('pattern-example-plaid.png')

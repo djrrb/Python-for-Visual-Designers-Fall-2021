@@ -35,3 +35,5 @@ for y in range(20):
             pattern()
             translate(w1*2)
     translate(0, w1*2)
+
+saveImage('pattern-example-argyle.png')
