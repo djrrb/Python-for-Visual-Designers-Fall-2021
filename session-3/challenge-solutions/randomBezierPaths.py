@@ -16,7 +16,7 @@ for frame in range(20):
     myPath = BezierPath()
     # we have to start a path by moving to certain coordinates
     myPath.moveTo((getRandomCoords(), getRandomCoords()))
-    for i in range(20):
+    for myNumber in range(20):
         # now draw a bunch of curves 
         myPath.curveTo(
             (getRandomCoords(), getRandomCoords()), # handle 1
