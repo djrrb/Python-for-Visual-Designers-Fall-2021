@@ -35,4 +35,4 @@ for myRow in range(myRows):
         # draw a shape
         oval(myX, myY, myColWidth, myRowHeight)
         
-saveImage('imageToShapes.png')
+saveImage('eyedropGrid.png')
