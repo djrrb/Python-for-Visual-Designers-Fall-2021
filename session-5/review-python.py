@@ -1,4 +1,8 @@
 ##############################
+# python keywords: https://docs.python.org/3/reference/lexical_analysis.html#keywords
+##############################
+
+##############################
 # set variables
 ##############################
 x = 10
@@ -12,8 +16,24 @@ y *= 20
 
 ##############################
 # execute functions
+# python’s builtin functions: https://docs.python.org/3/library/functions.html
 ##############################
 print('print() is a function')
+print('len("abc") =', len("abc"))
+
+##############################
+# define a function
+# a great way to set aside a block of reusable code
+# takes arguments, returns a thing if you want it to
+##############################
+
+def myFunction(arg1, arg2='default'):
+    return arg1*10+arg2*10
+print(myFunction('hi'))
+print(myFunction(30, 3))
+ 
+    
+
 
 ##############################
 # for loop
@@ -21,6 +41,24 @@ print('print() is a function')
 ##############################
 print('loop through some numbers')
 for myNumber in range(x):
+    print('\t', myNumber)
+    
+##############################
+# break a loop
+##############################
+print('loop through some numbers, break at 5')
+for myNumber in range(x):
+    if myNumber == 5:
+        break
+    print('\t', myNumber)
+    
+##############################
+# break a loop
+##############################
+print('loop through some numbers, skip 5')
+for myNumber in range(x):
+    if myNumber == 5:
+        continue
     print('\t', myNumber)
 
 ##############################
@@ -55,17 +93,6 @@ while myNumber != 6:
     myNumber = randint(1, 6)
     print('\t', myNumber)
     myCount += 1
-print('we rolled a 6 so we stop. It look', myCount, 'tries')
+print('we rolled a 6 so we can stop. It took', myCount, 'tries')
 
-##############################
-# define a function
-# a great way to set aside a block of reusable code
-# takes arguments, returns a thing if you want it to
-##############################
-
-def myFunction(arg1, arg2='default'):
-    return arg1*10+arg2*10
-print(myFunction('hi'))
-        
-    
     
