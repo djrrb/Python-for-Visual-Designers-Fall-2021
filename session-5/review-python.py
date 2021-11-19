@@ -19,7 +19,7 @@ y *= 20
 # python’s builtin functions: https://docs.python.org/3/library/functions.html
 ##############################
 print('print() is a function')
-print('len("abc") =', len("abc"))
+print('len("abcd") =', len("abcd"))
 
 ##############################
 # define a function
@@ -28,8 +28,11 @@ print('len("abc") =', len("abc"))
 ##############################
 
 def myFunction(arg1, arg2='default'):
+    #print(arg1, arg2)
     return arg1*10+arg2*10
-print(myFunction('hi'))
+
+myResults = myFunction('hi')
+print(myResults)
 print(myFunction(30, 3))
  
     
@@ -41,24 +44,6 @@ print(myFunction(30, 3))
 ##############################
 print('loop through some numbers')
 for myNumber in range(x):
-    print('\t', myNumber)
-    
-##############################
-# break a loop
-##############################
-print('loop through some numbers, break at 5')
-for myNumber in range(x):
-    if myNumber == 5:
-        break
-    print('\t', myNumber)
-    
-##############################
-# break a loop
-##############################
-print('loop through some numbers, skip 5')
-for myNumber in range(x):
-    if myNumber == 5:
-        continue
     print('\t', myNumber)
 
 ##############################
@@ -79,7 +64,14 @@ for myNumber in range(100):
     if myNumber > 10:
         print('\t', 'ok let’s break the loop now')
         break
-    
+        
+# continue a loop based on a conditional    
+for myNumber in range(100):
+    print('\t', myNumber)
+    if myNumber > 10:
+        print('\t', 'ok let’s break the loop now')
+        continue
+        
 ##############################
 # while loop
 # keep looping until a condition becomes false
