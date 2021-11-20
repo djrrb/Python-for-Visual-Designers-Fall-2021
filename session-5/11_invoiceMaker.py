@@ -171,7 +171,7 @@ for myProject in myProjects:
 # now set the total due, adding \n to skip a line
 myProjectString.append('\nTOTAL DUE:', font=myContentBoldFont)
 # also add the total cost, again using our helper function formatCost() to convert it to a nice pretty number
-myProjectCostString.append('\n'+formatCost(myProjectCost), font=myContentBoldFont)
+myProjectCostString.append('\n'+formatCost(totalCost), font=myContentBoldFont)
 
 
 # Okay, now we’ve gathered the data
