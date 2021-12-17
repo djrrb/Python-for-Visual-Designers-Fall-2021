@@ -27,6 +27,9 @@ def remap(value, start1, stop1, start2, stop2, withinBounds=False):
 # set number of frames
 myFrames = 30
 
+# set the text string we will draw
+myString = 'R'
+
 # set relative font path
 myFontPath = '../assets/CondorVariable-VF.ttf'
 
@@ -34,14 +37,13 @@ myFontPath = '../assets/CondorVariable-VF.ttf'
 for myFrame in range(myFrames):
     # make a new page and a background
     newPage()
-    fill(1)
+    fill(.2)
     rect(0, 0, width(), height())
 
     # set the font and make it big
     font(myFontPath, 800)
-    # in a saved state, move to the vertical center of the canvas
+    # in a saved state
     with savedState():
-        translate(0, height()/2)
         # set a starting point for x, we will make it bigger
         x = 0
         # now draw each position in the wave
@@ -53,31 +55,30 @@ for myFrame in range(myFrames):
             # mutiply this by half the height so the wave can go up and down to fill the canvas
             y = yMultiplier*height()/2
             # if we are on the “key” frame where the page we are drawing matches the dot
+            # also set the weight and italic value of the letter
+            # that we will draw
+            # remap(value, start1, stop1, start2, stop2)
+            wghtValue = remap(yMultiplier, -1, 1, 200, 900)
+            wdthValue = remap(yMultiplier, -1, 1, 50, 150)
+            italValue = remap(yMultiplier, -1, 1, 0, 1)
+            fontVariations(wght=wghtValue, wdth=wdthValue, ital=italValue)
+            stroke(.8, 1, 1)
+            strokeWidth(1)
+            fill(None)
+            text(myString, (width()/2, 200), align="center")
             if myPhase == myFrame:
-                # make it big and red
-                fill(1, 0, 0)
-                stroke(None)
-                oval(x-40, y-40, 80, 80)
-                # also set the weight and italic value of the letter
-                # that we will draw
-                # use the remap function to take the (-1, 1) range and map it to the range of the axis
-                wghtValue = remap(yMultiplier, -1, 1, 200, 900)
-                italValue = remap(yMultiplier, -1, 1, 0, 1)
-            else:
-                # draw all other frames as small light gray circles
-                stroke(.8)
-                strokeWidth(2)
-                fill(None)
-                oval(x-20, y-20, 40, 40)
-            # change the x value 
-            x += width()/myFrames
+                # store the values for the emphasis frame
+                theFrameWghtValue = wghtValue
+                theFrameWdthValue = wdthValue
+                theFrameItalValue = italValue
+        # draw the text at the end so it's on top
+        fill(1)
+        stroke(None)
+        # use the values we stored earlier
+        fontVariations(wght=theFrameWghtValue, wdth=theFrameWdthValue, ital=theFrameItalValue)
+        text(myString, (width()/2, 200), align="center")
         
-    # only once per frame, set the font
-    fontVariations(wght=wghtValue, ital=italValue)
-    # make it blue
-    fill(0, 0, 1)
-    # draw the text
-    text('a', (width()/2, 300), align="center")
+ 
 
 # save gif
-saveImage('variableFontAnimation.gif')
+saveImage('variableFontAnimationTrail.gif')
