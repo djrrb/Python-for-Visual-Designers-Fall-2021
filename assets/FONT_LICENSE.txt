@@ -1,5 +1,12 @@
 # DJR End User License Agreement
 
+## MINI License
+
+For use not exceeding:
+- 3 desktop workstations
+- 15,000 monthly unique web visitors
+- 1 app or e-book
+
 ## Multi-use License
 
 This End User License Agreement is a legal agreement between **you**, the licensee, and **me** (DJR Type LLC, or DJR for short). Please read it carefully.
